@@ -21,7 +21,7 @@ class UiHelper {
     );
   }
 
-  static CustonText(
+  static CustomText(
       {required String text,
       required double height,
       Color? color,

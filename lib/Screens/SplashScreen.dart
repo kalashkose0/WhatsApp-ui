@@ -32,8 +32,8 @@ class _SplashScreenState extends State<SplashScreen> {
             SizedBox(
               height: 20,
             ),
-            UiHelper.CustonText(
-                text: "WhatsApp", height: 18, fontWeight: FontWeight.bold)
+            UiHelper.CustomText(
+                text: "WhatsApp", height: 18, fontWeight: FontWeight.bold),
           ],
         ),
       ),

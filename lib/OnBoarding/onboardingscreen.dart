@@ -16,7 +16,7 @@ class onboardingscreen extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            UiHelper.CustonText(
+            UiHelper.CustomText(
                 text: "Welcome to Whatsapp",
                 height: 20,
                 color: Color(0XFF000000)),
@@ -26,20 +26,20 @@ class onboardingscreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                UiHelper.CustonText(text: "Read Out", height: 14),
-                UiHelper.CustonText(
+                UiHelper.CustomText(text: "Read Out", height: 14),
+                UiHelper.CustomText(
                     text: "Privacy Policy",
                     height: 14,
                     color: Color(0XFF0C42CC)),
-                UiHelper.CustonText(
+                UiHelper.CustomText(
                     text: "Tap ''Agree & continue''", height: 14),
                 SizedBox(
                   height: 5,
                 ),
                 Column(
                   children: [
-                    UiHelper.CustonText(text: "to accept the", height: 14),
-                    UiHelper.CustonText(
+                    UiHelper.CustomText(text: "to accept the", height: 14),
+                    UiHelper.CustomText(
                         text: "Terms of service",
                         height: 14,
                         color: Color(0XFF0C42CC))
@@ -53,7 +53,7 @@ class onboardingscreen extends StatelessWidget {
       floatingActionButton: UiHelper.CustomButton(
           Callback: () {
             Navigator.pushReplacement(context,
-                MaterialPageRoute(builder: (context) => loginScreen())); 
+                MaterialPageRoute(builder: (context) => loginScreen()));
           },
           buttonname: "Agree and continue"),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

@@ -19,24 +19,25 @@ class loginScreen extends StatelessWidget {
             height: 80,
           ),
           Center(
-            child: UiHelper.CustonText(
+            child: UiHelper.CustomText(
                 text: "Enter your phone number",
                 height: 16,
                 color: Color(0XFF00A884),
                 fontWeight: FontWeight.bold),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
+            
           ),
-          UiHelper.CustonText(
+          UiHelper.CustomText(
             text: "WhatsApp will need to verify your phone",
             height: 16,
           ),
-          UiHelper.CustonText(
+          UiHelper.CustomText(
             text: "number. Carrier charges may apply.",
             height: 16,
           ),
-          UiHelper.CustonText(
+          UiHelper.CustomText(
             text: "What's my number?",
             height: 16,
             color: Color(0XFF00A884),
