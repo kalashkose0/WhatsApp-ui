@@ -58,31 +58,31 @@ class _loginScreenState extends State<loginScreen> {
             const SizedBox(
               height: 50,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 60, right: 60),
-              child: DropdownButtonFormField(
-                items: countries.map((String country) {
-                  return DropdownMenuItem(
-                    child: Text(country),
-                    value: country,
-                  );
-                }).toList(),
-                onChanged: (newValue) {
-                  setState(() {
-                    selectedCountry = newValue!;
-                  });
-                },
-                value: selectedCountry,
-                decoration: InputDecoration(
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xFF00A884)),
-                  ),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xFF00A884)),
-                  ),
-                ),
-              ),
-            ),
+            // Padding(
+            //   padding: const EdgeInsets.only(left: 60, right: 60),
+            //   child: DropdownButtonFormField(
+            //     items: countries.map((String country) {
+            //       return DropdownMenuItem(
+            //         child: Text(country),
+            //         value: country,
+            //       );
+            //     }).toList(),
+            //     onChanged: (newValue) {
+            //       setState(() {
+            //         selectedCountry = newValue!;
+            //       });
+            //     },
+            //     value: selectedCountry,
+            //     decoration: InputDecoration(
+            //       enabledBorder: UnderlineInputBorder(
+            //         borderSide: BorderSide(color: Color(0xFF00A884)),
+            //       ),
+            //       focusedBorder: UnderlineInputBorder(
+            //         borderSide: BorderSide(color: Color(0xFF00A884)),
+            //       ),
+            //     ),
+            //   ),
+            // ),
             const SizedBox(
               height: 10,
             ),
@@ -139,7 +139,12 @@ class _loginScreenState extends State<loginScreen> {
         backgroundColor: Colors.green,
       ));
     } else {
-      // Navigator.push(context, MaterialPageRoute(builder: ((context) => otpScreen()));
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: ((context) => otpScreen(
+                    phonenumber: phonenumber,
+                  ))));
     }
   }
 }
