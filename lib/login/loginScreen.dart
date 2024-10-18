@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:whatsapp/Screens/OTP/otpScreen.dart';
 import 'package:whatsapp/Widgets/ui_helper.dart';
 
 class loginScreen extends StatefulWidget {
@@ -57,28 +58,31 @@ class _loginScreenState extends State<loginScreen> {
             const SizedBox(
               height: 50,
             ),
-            // Padding(
-            //   padding: const EdgeInsets.only(left: 60, right: 60),
-            //   child: DropdownButtonFormField(
-            //     items: countries.map((String country) {
-            //       return DropdownMenuItem(
-            //         child: Text(country),
-            //         value: country,
-            //       );
-            //     }).toList(),
-            //     onChanged: (newvalue) {
-            //       setState(() {
-            //         selectedCountry = newvalue!;
-            //       });
-            //     },
-            //     value: selectedCountry,
-            //     decoration: InputDecoration(
-            //         enabledBorder: UnderlineInputBorder(
-            //             borderSide: BorderSide(color: Color(0XFF00A884))),
-            //         focusedBorder: UnderlineInputBorder(
-            //             borderSide: BorderSide(color: Color(0XFF00A884)))),
-            //   ),
-            // ),
+            Padding(
+              padding: const EdgeInsets.only(left: 60, right: 60),
+              child: DropdownButtonFormField(
+                items: countries.map((String country) {
+                  return DropdownMenuItem(
+                    child: Text(country),
+                    value: country,
+                  );
+                }).toList(),
+                onChanged: (newValue) {
+                  setState(() {
+                    selectedCountry = newValue!;
+                  });
+                },
+                value: selectedCountry,
+                decoration: InputDecoration(
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFF00A884)),
+                  ),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Color(0xFF00A884)),
+                  ),
+                ),
+              ),
+            ),
             const SizedBox(
               height: 10,
             ),
@@ -120,8 +124,22 @@ class _loginScreenState extends State<loginScreen> {
             )
           ],
         ),
-        floatingActionButton:
-            UiHelper.CustomButton(Callback: () {}, buttonname: "Next"),
+        floatingActionButton: UiHelper.CustomButton(
+            Callback: () {
+              login(phoneController.text.toString());
+            },
+            buttonname: "Next"),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat);
+  }
+
+  login(String phonenumber) {
+    if (phonenumber == "") {
+      return ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text("Enter Phone Number"),
+        backgroundColor: Colors.green,
+      ));
+    } else {
+      // Navigator.push(context, MaterialPageRoute(builder: ((context) => otpScreen()));
+    }
   }
 }
