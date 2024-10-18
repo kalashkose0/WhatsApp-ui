@@ -33,10 +33,16 @@ class onboardingscreen extends StatelessWidget {
                     color: Color(0XFF0C42CC)),
                 UiHelper.CustomText(
                     text: "Tap ''Agree & continue''", height: 14),
-                SizedBox(
-                  height: 5,
+                const   SizedBox(
+                  height: 20,
                 ),
-                Column(
+              ],
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     UiHelper.CustomText(text: "to accept the", height: 14),
                     UiHelper.CustomText(
