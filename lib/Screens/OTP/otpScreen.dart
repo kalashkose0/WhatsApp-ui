@@ -5,6 +5,7 @@ import 'package:whatsapp/profile/profileScreens.dart';
 class otpScreen extends StatelessWidget {
   String phonenumber;
   otpScreen({required this.phonenumber});
+
   TextEditingController otp1Controller = TextEditingController();
   TextEditingController otp2Controller = TextEditingController();
   TextEditingController otp3Controller = TextEditingController();
@@ -22,27 +23,27 @@ class otpScreen extends StatelessWidget {
         body: Center(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 80,
               ),
               UiHelper.CustomText(
                   text: "Verifying your number",
                   height: 20,
-                  color: Color(0XFF00A884),
+                  color: const Color(0XFF00A884),
                   fontWeight: FontWeight.bold),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               UiHelper.CustomText(
                   text: "You've tried to register +91${phonenumber}",
                   height: 15),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               UiHelper.CustomText(
                   text: "recently. Wait before requesting an sms or a call",
                   height: 15),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Row(
@@ -56,46 +57,46 @@ class otpScreen extends StatelessWidget {
                     child: UiHelper.CustomText(
                         text: "Wrong number?",
                         height: 15,
-                        color: Color(0XFF00A884)),
+                        color: const Color(0XFF00A884)),
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   UiHelper.CustomContainer(otp1Controller),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   UiHelper.CustomContainer(otp2Controller),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   UiHelper.CustomContainer(otp3Controller),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   UiHelper.CustomContainer(otp4Controller),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   UiHelper.CustomContainer(otp5Controller),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   UiHelper.CustomContainer(otp6Controller),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               UiHelper.CustomText(
                   text: "Didn't recieve code?",
                   height: 15,
-                  color: Color(0XFF00A884))
+                  color: const Color(0XFF00A884))
             ],
           ),
         ),

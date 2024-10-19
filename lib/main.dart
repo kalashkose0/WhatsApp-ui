@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp/Screens/SplashScreen.dart';
+import 'package:whatsapp/Screens/homeScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,11 +15,11 @@ class MyApp extends StatelessWidget {
       title: 'Whatsapp',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Color(0XFF00A884)),
+          colorScheme: ColorScheme.fromSeed(seedColor: const Color(0XFF00A884)),
           useMaterial3: false,
-          fontFamily: "Regular"), 
-      home: SplashScreen(),
+          fontFamily: "Regular"),
+      // home: SplashScreen(),
+      home: const homeScreen(),
     );
   }
 }
-
