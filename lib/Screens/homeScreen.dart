@@ -36,14 +36,16 @@ class homeScreen extends StatelessWidget {
           title: UiHelper.CustomText(
               text: "WhatsApp", height: 25, color: Colors.white),
           actions: [
-            Padding(
-              padding: const EdgeInsets.only(right: 20),
-              child: IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.search),
-                color: Colors.white,
-              ),
-            )
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.search),
+              color: Colors.white,
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.more_vert_sharp),
+              color: Colors.white,
+            ),
           ],
         ),
         body: TabBarView(children: [

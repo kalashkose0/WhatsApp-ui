@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: const Color(0XFF00A884)),
           useMaterial3: false,
           fontFamily: "Regular"),
-      // home: SplashScreen(),
-      home: const homeScreen(),
+      home: SplashScreen(),
+      // home: const homeScreen(),
     );
   }
 }
